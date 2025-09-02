@@ -1,0 +1,124 @@
+package br.edu.principal;
+import java.util.Scanner;
+public class Principal {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		int opcao;
+		 System.out.println("=========== CALCULO MEDIA IFCE ============= ");
+		 System.out.println("1 : cauculara a media somente da n1 : ");
+		 System.out.println("2 : calcular a media somente da n2 : ");
+		 System.out.println("3 : calcular a media do semestre todo :  ");
+		 System.out.println("=========== CALCULO MEDIA IFCE ============= ");
+		 
+		 
+		 System.out.println("digite sua opção : ");
+	     opcao = sc.nextInt();
+	     
+	     if  ( opcao == 1  ) {
+	    	 
+	    	 double nota1, trabalho , nota2, media ;
+	    	 int peso1, peso2, peso3 ;
+	    	 System.out.println("========== CALCULO MEDIA N1 ============== ");
+	    	 System.out.println("digite a nota da primera prova da n1 :  ");
+	    	 nota1 = sc.nextDouble();
+	    	 
+	    	 System.out.println("digite a nota da segunda  prova da n1:  "); 
+	    	 nota2 = sc.nextDouble();
+	    	 
+	    	 System.out.println("digite a nota do seu trablho :  ");
+	    	 trabalho = sc.nextDouble();
+	    	 
+	    	 System.out.println("digite o peso da primera prova :  ");
+	    	 
+	    	 peso1 = sc.nextInt();
+	    	 System.out.println("digite o peso da segunda prova :  ");
+	    	 peso2 = sc.nextInt();
+	    	 System.out.println("digite o peso do trabalho prova :  ");
+	    	 peso3 = sc.nextInt();
+	
+	    	 
+	    	 media = ((nota1 * peso1)  + (nota2 * peso2) +( trabalho * peso3)) / peso1 + peso2 + peso3 ;
+	    	 
+	    	 System.out.println("========== CALCULO MEDIA N1 ============== "); 
+	    	 System.out.println("sua media da n1 foi : " + media );
+	    	    	 
+	     }
+	     else if  ( opcao == 2 ) {
+	    	 
+	    	 
+	    	 double nota1, trabalho , nota2, media ;
+	    	 int peso1, peso2, peso3 ;
+	    	 System.out.println("========== CALCULO MEDIA N2 ============== ");
+	    	 System.out.println("digite a nota da primera prova da n1 :  ");
+	    	 nota1 = sc.nextDouble();
+	    	 
+	    	 System.out.println("digite a nota da segunda  prova da n2:  "); 
+	    	 nota2 = sc.nextDouble();
+	    	 
+	    	 System.out.println("digite a nota do seu trablho :  ");
+	    	 trabalho = sc.nextDouble();
+	    	 
+	    	 System.out.println("digite o peso da primera prova :  ");
+	    	 
+	    	 peso1 = sc.nextInt();
+	    	 System.out.println("digite o peso da segunda prova :  ");
+	    	 peso2 = sc.nextInt();
+	    	 System.out.println("digite o peso do trabalho prova :  ");
+	    	 peso3 = sc.nextInt();
+	    	 
+	    	 media = (nota1 * peso1  + nota2 * peso2 + trabalho * peso3) / peso1 +peso2 + peso3 ;
+	    	 
+	    	 System.out.println("========== CALCULO MEDIA N2 ============== "); 
+	    	 System.out.println("sua media da n2 foi : " + media );
+	    	 
+	     }
+	     
+	     else if ( opcao == 3  ) {
+	    	 
+	    	 System.out.println("========== CALCULO MEDIA DE TODO O SEMESTRE  ============== ");
+	    	 
+	    	 System.out.println("digite a media da n1 : ");
+	    	 
+	    	 double n1 , n2 , media_semestre ;
+	    	 n1 = sc.nextDouble();
+	    	 System.out.println("digite a media da n2 : ");
+	    	 n2 = sc.nextDouble();
+	    	 
+	    	 media_semestre = (n1*2 + n2 * 3  )/ 5 ;
+	    	 
+	    	 if (media_semestre >= 6  ) {
+	    		 System.out.println("prabens você passou de semestre ");
+	    		 
+	    	 }
+	    	 else if (media_semestre >=3 & media_semestre<=6) {
+	    		 System.out.println("voce ficou de af : ");
+	    		 
+	    		 double af, utima_chance ;
+	    		 System.out.println("digite a nota da sua af  : ");
+	    		 af = sc.nextDouble();
+	    		 
+	    		 utima_chance =( media_semestre + af )/ 2 ;
+	    		 
+	    		 if (utima_chance >= 5 ) {
+	    			 System.out.println("voce passou parabens ! : ");
+	    			 System.out.println("digite sua media foi   : " + utima_chance );
+	    		 }
+	    		 else {
+	    			 System.out.println("voce foi reprovado   : " );
+	    			 System.out.println("digite sua media foi   : " + utima_chance );  			 
+	    		 }	 
+	    	 }
+	    	 else { 
+	    		 System.out.println("voce foi reprovado   : " );
+    			 System.out.println("digite sua media foi   : " + media_semestre );  
+	    	 }
+	    	 
+	    	 
+	    	 
+	     }
+	    
+	}
+
+}
